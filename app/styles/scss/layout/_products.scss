@@ -1,0 +1,149 @@
+.title-component {
+	color: #5e6774;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 29px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.content-main-product {
+	border-left: 1px solid #eeebeb;
+}
+
+.item-product {
+	border-right: 1px solid #eeebeb; 
+	border-top: 1px solid #eeebeb; 
+	border-bottom: 1px solid #eeebeb; 
+	cursor: pointer;
+	transition: all ease-in-out .25s;
+
+	@media (max-width: 1024px) {
+		height: 462px !important;
+	}
+
+	.image-entry {
+		height: 150px;
+		text-align: center;
+		margin-bottom: 30px;
+
+		img {
+			height: 100%;
+			transition: all ease .25s;
+		}
+	}
+
+	&:hover {
+		@include background-gradient(#f9f9f9, #ffffff);
+		height: 462px !important; 
+	
+		img {
+  			transform: scale(1.1);
+		}
+	}
+
+	.description-entry {
+		position: relative;
+		height: 135px;
+
+		.description-product {
+			color: #303132;
+			font-size: 16px;
+			line-height: 16px;
+			margin-bottom: 20px;
+			min-height: 50px;
+		}
+
+
+		p {
+			display: block;
+
+			&.por {
+				position: relative;
+				margin-bottom: 10px;
+
+				strong {
+					font-size: 23px;
+				}
+
+			}
+		}
+	}
+
+	.button-cart-add {
+		background-color: transparent;
+		border: 1px solid #d4d2d2;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 21px;
+		font-weight: bold;
+		height: 56px;
+		line-height: 56px;
+		margin-top: 25px;
+		padding: 0 50px 0 18px;
+		text-align: center;
+		color: #353f4f;
+		position: relative;
+
+		&:before {
+			content: '';
+			height:56px;
+			width: 0;
+			background-color: #ff6600;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			z-index: 99;
+			transition: width ease .25s;
+		} 
+
+		&:hover {
+			color: #1f2125;
+
+			&:before {
+				width: 10px;
+			}
+
+			i {
+				color: #ff6600;
+			}
+		}
+
+		i {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+	}
+}
+
+.content-slider,
+.content-main-product {
+	position: relative;
+	overflow: hidden;
+	transition:all .4s ease-out;
+}
+
+
+.pagination {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+
+	.circle {
+		background-color: #adadad;
+		border-radius: 100%;
+		cursor: pointer;
+		display: block;
+		display: inline-block;
+		height: 12px;
+		width: 12px;
+		margin-right: 10px;
+
+		&.active,
+		&:hover {
+			background-color: #353f4f;
+		}
+	}
+}
+
